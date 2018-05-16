@@ -1,6 +1,6 @@
 <?php
 $con = dbopen();
-$strsql = "select * from trans inner join users on users.user_id = trans.user_id limit 100";
+$strsql = "select trans.trans_id, trans.trans_no, trans.user_id, login, name, trans.remarks from trans inner join users on users.user_id = trans.user_id limit 100";
 sql2table($strsql);
 //$result = $con->query($strsql);
 //echo $result->field_count;
