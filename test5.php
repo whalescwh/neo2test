@@ -1,9 +1,14 @@
 <?php
+echo $_REQEST["fsubmit"];
 switch ($_REQEST["fsubmit"]) {
   case "Create":
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
     echo $_REQUEST["fend"];
+    if ($_REQUEST["fstart"] <= 0) echo "<p>Start must be a number greater than zero";
+    if ($_REQUEST["fend"] <= 0) echo "<p>End must be a number greater than zero";
+    if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
+    
     showinput();
   default:
     showinput();
