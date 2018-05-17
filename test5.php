@@ -1,9 +1,6 @@
 <?php
 echo "<html><body>";
-    echo $_REQUEST["fsubmit"];
-    echo $_REQUEST["fuserid"];
-    echo $_REQUEST["fstart"];
-    echo $_REQUEST["fend"];
+
 if ($_REQEST["fsubmit"] == "Create") {
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
