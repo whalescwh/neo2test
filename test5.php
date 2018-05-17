@@ -1,4 +1,5 @@
 <?php
+include 'dblib.php';
 echo "<html><body>";
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
