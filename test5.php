@@ -1,7 +1,7 @@
 <?php
 echo "<html><body>";
 
-if ($_REQEST["fuserid"] != "") {
+if (strcmp($_REQEST["fuserid"], "") != 0) {
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
     echo $_REQUEST["fend"];
