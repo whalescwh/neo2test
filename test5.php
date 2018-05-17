@@ -1,8 +1,6 @@
 <?php
 echo "<html><body>";
-    echo $_REQUEST["fuserid"];
-    echo $_REQUEST["fstart"];
-    echo $_REQUEST["fend"];
+
 switch ($_REQEST["fsubmit"]) {
   case "Create":
     echo $_REQUEST["fuserid"];
