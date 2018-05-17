@@ -21,6 +21,7 @@ exit();
 
 function showinput() {
   ?>
+1
 <form method=post>
 <table>
 <tr><td>User id:</td><td><select name=fuserid><option value="whales">whales</option><option value="whales1">whales1</option></select></td></tr>
