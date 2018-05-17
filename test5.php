@@ -12,8 +12,7 @@ echo "<html><body>";
 			$strsql = "insert into trans (trans_no, user_id, remarks) values (" . $cnt . ", ". $_REQUEST["fuserid"].", 'remarks ".$_REQUEST["fstart"]." to ".$_REQUEST["fend"]."')";
 			echo $strsql;
 			sqlupdate($strsql);
-		};
-	else {
+	}	else {
 		echo "-";
 	}
 
