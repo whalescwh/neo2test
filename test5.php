@@ -1,5 +1,6 @@
 <?php
 echo "<html><body>";
+    echo $_REQUEST["fsubmit"];
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
     echo $_REQUEST["fend"];
