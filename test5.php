@@ -1,5 +1,15 @@
 <?php
-showinput();
+switch ($_REQEST["fsubmit"]) {
+  case "Create":
+    echo $_REQUEST["fuserid"];
+    echo $_REQUEST["fstart"];
+    echo $_REQUEST["fend"];
+    showinput();
+  default:
+    showinput();
+    break;
+};
+
 exit();
 
 function showinput() {
@@ -16,6 +26,7 @@ function showinput() {
 </form>
 </body>
 </html>
+
 <?php
 }
 ?>
