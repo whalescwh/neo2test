@@ -1,4 +1,8 @@
 <?php
+echo "<html><body>";
+    echo $_REQUEST["fuserid"];
+    echo $_REQUEST["fstart"];
+    echo $_REQUEST["fend"];
 switch ($_REQEST["fsubmit"]) {
   case "Create":
     echo $_REQUEST["fuserid"];
@@ -14,12 +18,11 @@ switch ($_REQEST["fsubmit"]) {
     break;
 };
 
+echo "</body></html>":
 exit();
 
 function showinput() {
   ?>
-<html>
-<body>
 <form method=post>
 <table>
 <tr><td>User id:</td><td><select name=fuserid><option value="whales">whales</option><option value="whales1">whales1</option></select></td></tr>
@@ -28,8 +31,6 @@ function showinput() {
 <tr><td><input type=submit name=fsubmit value="Create"></td><td><input type=reset value="Cancel"></td></tr>
 </table>
 </form>
-</body>
-</html>
 
 <?php
 }
