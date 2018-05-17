@@ -10,8 +10,9 @@ echo "<html><body>";
     $cnt = $_REQUEST["fstart"];
     for ($cnt=$_REQUEST["fstart"]; $cnt <= $_REQUEST["fend"]; $cnt ++) {
         $strsql = "insert into trans (trans_no, userid, remarks) value (" . $cnt . ", '". $_REQUEST["fuserid"]."', 'remarks ".$_REQUEST["fstart"]." to ".$_REQUEST["fend"]."')";
+        echo $strsql;
+        sqlupdate($strsql);
     };
-    echo $strsql;
 
 showinput();
 echo "</body></html>";
