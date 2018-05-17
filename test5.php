@@ -1,7 +1,7 @@
 <?php
 echo "<html><body>";
 
-if ($_REQEST["fsubmit"] == "Create") {
+if ($_REQEST["fuserid"] != "") {
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
     echo $_REQUEST["fend"];
@@ -9,7 +9,9 @@ if ($_REQEST["fsubmit"] == "Create") {
     if ($_REQUEST["fend"] <= 0) echo "<p>End must be a number greater than zero";
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
     $cnt = $_REQUEST["fstart"];
-    $strsql = "insert into trans (trans_no, userid, remarks) value (" . $cnt . ", '". $_REQUEST["fuserid"]."', 'remarks ".$_REQUEST["fstart"]." to ".$_REQUEST["fend"]."')";
+    for ($cnt=$_REQUEST["fstart"]; $cnt <= $_REQUEST["fend"]; $cnt ++) {
+        $strsql = "insert into trans (trans_no, userid, remarks) value (" . $cnt . ", '". $_REQUEST["fuserid"]."', 'remarks ".$_REQUEST["fstart"]." to ".$_REQUEST["fend"]."')";
+    };
     echo $strsql;
 };
 showinput();
