@@ -8,7 +8,6 @@ switch ($_REQEST["fsubmit"]) {
     if ($_REQUEST["fend"] <= 0) echo "<p>End must be a number greater than zero";
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
     
-    showinput();
     echo "?";
   default:
     showinput();
