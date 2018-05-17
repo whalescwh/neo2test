@@ -4,8 +4,7 @@ echo "<html><body>";
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
     echo $_REQUEST["fend"];
-switch ($_REQEST["fsubmit"]) {
-  case "Create":
+if ($_REQEST["fsubmit"] == "Create") {
     echo $_REQUEST["fuserid"];
     echo $_REQUEST["fstart"];
     echo $_REQUEST["fend"];
@@ -13,12 +12,8 @@ switch ($_REQEST["fsubmit"]) {
     if ($_REQUEST["fend"] <= 0) echo "<p>End must be a number greater than zero";
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
     
-    echo "?";
-  default:
-    showinput();
-    break;
 };
-
+showinput();
 echo "</body></html>";
 exit();
 
