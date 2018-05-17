@@ -9,6 +9,7 @@ switch ($_REQEST["fsubmit"]) {
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
     
     showinput();
+    echo "?";
   default:
     showinput();
     break;
