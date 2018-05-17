@@ -1,3 +1,9 @@
+<?php
+showinput();
+exit();
+
+function showinput() {
+  ?>
 <html>
 <body>
 <form method=post>
@@ -10,3 +16,6 @@
 </form>
 </body>
 </html>
+<?php
+}
+?>
