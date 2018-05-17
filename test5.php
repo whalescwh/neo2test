@@ -19,7 +19,6 @@ echo "<html><body>";
 		};
 	    echo "Updated ". $cnt . " rows<br>";
 	    dbclose($con);
-	    unset($_REQUEST["fstart"];
 	}
 
 showinput();
