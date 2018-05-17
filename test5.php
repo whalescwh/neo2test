@@ -9,11 +9,14 @@ echo "<html><body>";
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
 $cnt = $_REQUEST["fstart"];
     if ($cnt > 0 ) {
+	    $con = dbopen();
+	    
 		for ($cnt=$_REQUEST["fstart"]; $cnt <= $_REQUEST["fend"]; $cnt ++) {
 			$strsql = "insert into trans (trans_no, user_id, remarks) values (" . $cnt . ", ". $_REQUEST["fuserid"].", 'remarks ".$_REQUEST["fstart"]." to ".$_REQUEST["fend"]."')";
 			echo $strsql;
 			sqlupdate($strsql);
 		};
+	    dbclose($con);
 	}	else {
 		echo "-";
 	}
