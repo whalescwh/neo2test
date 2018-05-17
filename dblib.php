@@ -36,7 +36,8 @@ function sql2json ($sqlstr) {
 function sqlupdate ($sqlstr) {
 	global $con;
 	//echo $sqlstr;
-	$result = mysql_query($sqlstr);
+	$result = $con->query($sqlstr);
+	
 	return $result;
 }
 //return sql as html table
