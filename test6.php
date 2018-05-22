@@ -5,10 +5,11 @@ echo "<html><body>";
     //echo $_REQUEST["fstart"];
     //echo $_REQUEST["fend"];
 showinput();
-
-if ($_REQUEST["fsql"] != "") {
+$strsql = $_REQUEST["fsql"];
+if ($strsql != "") {
 	$con = dbopen();
-	sql2table($_REQUEST["fsql"]);
+	sql2table("select count(*) from (". $strsql . ") aa");
+	sql2table($strsql);
 	dbclose($con);
 }
 
@@ -17,7 +18,7 @@ exit();
 
 function showinput() {
 	$strsql = $_REQUEST["fsql"];
-	if ($strsql == "") {$strsql = "select * from users inner join trans on trans.user_id = users.user_id"; };
+	if ($strsql == "") {$strsql = "select * from users inner join trans on trans.user_id = users.user_id limit 100"; };
   ?>
 
 <form method=post>
