@@ -21,7 +21,7 @@ function dbclose($con) {
 //return sql as array
 function sql2a ($sqlstr) {
 	global $con;
-	$result = mysql_query($sqlstr);
+	$result = $con->query($sqlstr);
 //?echo $sqlstr;
 	return $result;
 }

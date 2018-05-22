@@ -8,7 +8,7 @@ showinput();
 $strsql = $_REQUEST["fsql"];
 if ($strsql != "") {
 	$con = dbopen();
-	sql2table("select count(*) from (". $strsql . ") aa");
+	echo sizeof(sql2a($strsql ));
 	sql2table($strsql);
 	dbclose($con);
 }
