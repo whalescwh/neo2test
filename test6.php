@@ -22,7 +22,7 @@ function showinput() {
 
 <form method=post>
 <table>
-<tr><td><textarea name=fsql rows=6 cols=80><?php echo $_REQUEST["fsql"]; ?></textarea></td></tr>
+<tr><td><textarea name=fsql rows=6 cols=80><?php echo $strsql; ?></textarea></td></tr>
 <tr><td><input type=submit name=fsubmit value="Run SQL"><input type=reset value="Cancel"></td></tr>
 </table>
 </form>
