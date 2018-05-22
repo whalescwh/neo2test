@@ -51,6 +51,7 @@ function sql2table ($sqlstr) {
 		echo "<th>" . $fldname->name ;
 	}
 	echo "</tr>";
+	$rowcnt = 0;
 	while($row = mysqli_fetch_row($result))
 	{
 	  echo "<tr class=list>";
@@ -63,9 +64,11 @@ function sql2table ($sqlstr) {
 		}
 	  }
 	  echo "</tr>";
+	  $rowcnt = $rowcnt + 1;
 	}
 	echo "</table>";
 	$result->close();
+	return $rowcnt;
 };
 //return sql as html table with last row as sum
 function sql2tablesum ($sqlstr, $sqlsum) {

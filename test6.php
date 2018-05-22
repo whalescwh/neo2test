@@ -8,9 +8,9 @@ showinput();
 $strsql = $_REQUEST["fsql"];
 if ($strsql != "") {
 	$con = dbopen();
-	echo count(sql2a($strsql ));
-	sql2table($strsql);
+	$rowcnt = sql2table($strsql);
 	dbclose($con);
+	echo "<p>Total rows: " . $rowcnt . ".";
 }
 
 echo "</body></html>";
