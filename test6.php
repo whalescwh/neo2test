@@ -20,8 +20,8 @@ function showinput() {
 
 <form method=post>
 <table>
-<tr><td>SQL</td><td><textarea name=fsql rows=6 cols=50></textarea></td>
-<td><input type=submit name=fsubmit value=Run></td><td><input type=reset value="Cancel"></td></tr>
+<tr><td><textarea name=fsql rows=6 cols=50></textarea></td></tr>
+<tr><td><input type=submit name=fsubmit value="Run SQL"><input type=reset value="Cancel"></td></tr>
 </table>
 </form>
 
