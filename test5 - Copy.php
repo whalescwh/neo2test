@@ -11,21 +11,14 @@ echo "<html><body>";
     $cnt = $_REQUEST["fstart"];
     if ($cnt > 0 ) {
 	    $con = dbopen();
-	    mysqli_autocommit($con,FALSE);
-		$cnt1 = 0;
+	    
 		for ($cnt=$_REQUEST["fstart"]; $cnt <= $_REQUEST["fend"]; $cnt ++) {
 			$strsql = "insert into trans (trans_no, user_id, remarks) values (" . $cnt 
 			. ", ". $_REQUEST["fuserid"].", '".$_REQUEST["fremarks"] ."')";
 			//echo $strsql;
 			sqlupdate($strsql);
-			$cnt1 = $cnt1 + 1 ;
-			if ($cnt1 >= 100) {
-				mysqli_commit($con);
-				$cnt1 = 0;
-			}
 		};
 	    echo "Updated ". $cnt . " rows<br>";
-		mysqli_commit($con);
 	    dbclose($con);
 	}
 
