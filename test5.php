@@ -10,7 +10,7 @@ echo "<html><body>";
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
     $cnt = $_REQUEST["fstart"];
     if ($cnt > 0 ) {
-		echo time() . " - Start<br>";
+		echo date("H:m:s") . " - Start<br>";
 	    $con = dbopen();
 	    mysqli_autocommit($con,FALSE);
 		$cnt1 = 0;
@@ -28,7 +28,7 @@ echo "<html><body>";
 	    echo "Updated ". $cnt . " rows<br>";
 		mysqli_commit($con);
 	    dbclose($con);
-		echo time() . " - End<br>";
+		echo date("H:m:s") . " - End<br>";
 	}
 
 showinput();
