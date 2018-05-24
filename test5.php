@@ -9,8 +9,8 @@ echo "<html><body>";
     if ($_REQUEST["fend"] <= 0) echo "<p>End must be a number greater than zero";
     if ($_REQUEST["fstart"] < $_EQUEST["fend"]) echo "<p>End must not be samller than Start";
     $cnt = $_REQUEST["fstart"];
+	echo date("H:m:s") . " - Start<br>";
     if ($cnt > 0 ) {
-		echo date("H:m:s") . " - Start<br>";
 	    $con = dbopen();
 	    mysqli_autocommit($con,FALSE);
 		$cnt1 = 0;
@@ -28,8 +28,8 @@ echo "<html><body>";
 	    echo "Updated ". $cnt . " rows<br>";
 		mysqli_commit($con);
 	    dbclose($con);
-		echo date("H:m:s") . " - End<br>";
 	}
+	echo date("H:m:s") . " - End<br>";
 
 showinput();
 echo "</body></html>";
