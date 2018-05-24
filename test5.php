@@ -20,7 +20,7 @@ echo "<html><body>";
 			//echo $strsql;
 			sqlupdate($strsql);
 			$cnt1 = $cnt1 + 1 ;
-			if ($cnt1 >= 100) {
+			if ($cnt1 >= 1000) {
 				mysqli_commit($con);
 				$cnt1 = 0;
 			}
