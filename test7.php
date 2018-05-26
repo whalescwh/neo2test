@@ -11,5 +11,6 @@ sql2table($strsql);
 sql2table($strsql);
 				echo date("H:m:s") . " - 3<br>";
 dbclose($con);
-				?>
+
+?>
 				
